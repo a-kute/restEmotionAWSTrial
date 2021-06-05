@@ -6,7 +6,7 @@ from tensorflow import keras
 from werkzeug.utils import secure_filename
 application = Flask(__name__)
 
-emotion_model = tf.keras.models.load_model('static/full_emotion_model.h5')
+emotion_model = keras.models.load_model('static/full_emotion_model.h5')
 
 @application.route('/')
 def hello_world():
